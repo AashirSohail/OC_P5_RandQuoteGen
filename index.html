@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>P5</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!--Materialize CSS-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+    
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <script src="js/scripts.js"></script>
+
+<div class="fixed-action-btn">
+    <a onclick = "quit()" class="btn-floating btn-large red">
+        <i class="fas fa-times-circle"></i>
+    </a>
+</div>
+
+<div class = "container">
+ <div class = "row">
+    <div class = "col s12 center">
+        <h3>Random Quote Generator</h3><br>
+        <h5>Choose The Number of Quotes &amp; Type</h5>
+    </div>
+ </div>
+
+ <div class = "row">
+    <div class = "col s12">
+        <section>
+            <form action="#">
+                <p class="range-field">
+                  <input id = "slider" type="range" id="test5" min="1" max="5"/>
+                </p>
+              </form>        
+        </section>
+    </div>
+ </div>
+
+ <div class = "row">
+    <div class = "col s6 m6 l6">
+        <button class="btn waves-effect waves-light btn-large pulse happy" id = "happy"  type="submit" onclick="decide()" name="action">
+            <i class="fas fa-smile-beam"></i>&ensp;
+            Happy
+        </button>
+    </div>
+    <div class = "col s6 m6 l6">
+        <button class="btn waves-effect waves-light btn-large pulse" id = "inspire" type="submit" onclick="decide()" name="action">
+            <i class="fas fa-lightbulb"></i>&ensp;            
+            Inspire
+        </button>
+    </div>
+</div>
+</div>
+
+<h4>Your Quotes</h4>
+<section id ="quotes"  class = "container">
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
