@@ -1,6 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("slider").value = "1";
-});
 
 function decide(){
     document.getElementById('happy').addEventListener("click", function() {
@@ -15,16 +12,17 @@ function decide(){
 }
 
 function quote_gen(check){
-    var x = document.getElementById("slider").value;
+    var count = document.getElementById("slider").value;
     var area = document.getElementById("quotes");
-    //var unique_array = unique(x);
+    var delayAnimation = 0.5;
     area.innerHTML = " ";
-    console.log(x);
-    for (i = 0; i < x; i++) {
+    console.log(count);
+    for (i = 0; i < count; i++) {
         var text = "";
         (check != 1 ? text = inspire_text() : text = happy_text());
         console.log(text);
-        area.innerHTML += '<p class = "animated bounceInUp delay-0.5s">' + text + '</p>';
+        content = { txt : text}
+        area.innerHTML += `<p class = "animated bounceInUp delay-0.5s"> ${ content.txt } </p>`;
     };
 }
 
@@ -114,3 +112,7 @@ function quit(){
     var area = document.getElementById("quotes");
     area.innerHTML = " "
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("slider").value = "1";
+});
